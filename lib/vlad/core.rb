@@ -10,6 +10,8 @@ namespace :vlad do
   desc "Show the vlad setup.  This is all the default variables for vlad
     tasks.".cleanup
 
+  set :ancillary_dir, []
+
   task :debug do
     require 'yaml'
 
@@ -39,9 +41,10 @@ namespace :vlad do
   desc "Prepares application servers for deployment.".cleanup
 
   remote_task :setup_app, :roles => :app do
-    dirs = [deploy_to, releases_path, shared_path]
+    dirs =  [deploy_to, releases_path, shared_path]
     dirs << scm_path unless skip_scm
     dirs += shared_paths.keys.map { |d| File.join(shared_path, d) }
+    dirs += ancillary_dir
     dirs = dirs.join(' ')
 
     commands = [

@@ -10,8 +10,6 @@ namespace :vlad do
   desc "Show the vlad setup.  This is all the default variables for vlad
     tasks.".cleanup
 
-  set :ancillary_dir, []
-
   task :debug do
     require 'yaml'
 
@@ -27,6 +25,8 @@ namespace :vlad do
     puts "# Roles:"
     y Rake::RemoteTask.roles
   end
+
+  set :ancillary_dir, []
 
   desc "Setup your servers. Before you can use any of the deployment
     tasks with your project, you will need to make sure all of your

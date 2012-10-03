@@ -65,10 +65,6 @@ module Vlad
   end
 end
 
-namespace :vlad do
-  set :ancillary_dir, []
-end
-
 class String #:nodoc:
   def cleanup
     if ENV['FULL'] then

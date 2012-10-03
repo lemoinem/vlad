@@ -26,8 +26,6 @@ namespace :vlad do
     y Rake::RemoteTask.roles
   end
 
-  set :ancillary_dir, []
-
   desc "Setup your servers. Before you can use any of the deployment
     tasks with your project, you will need to make sure all of your
     servers have been prepared with 'rake vlad:setup'. It is safe to

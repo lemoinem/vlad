@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
   gem.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.txt", "considerations.txt"] + gem.files.grep(%r{^doco/})
 
   gem.add_runtime_dependency("rake", ['~> 0.8'])
-  gem.add_runtime_dependency("rake-remote_task", ['~> 2.0'])
+  gem.add_runtime_dependency("rake-remote_task", ['~> 2.2'])
 
   gem.add_development_dependency('minitest', ['~> 2.11.0'])
   gem.add_development_dependency('hoe', ['~> 2.14.0'])
